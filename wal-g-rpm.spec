@@ -19,7 +19,7 @@ and non-exclusive base backups for Postgres. More information on the design and 
 Citus Data blog post "Introducing WAL-G by Citus: Faster Disaster Recovery for Postgres".
 
 %prep
-%setup -q -c -n wal-g.linux-amd64
+%setup -q -c -n wal-g-%{version}-%{release}.x86_64
 
 %install
 #rm -rf $RPM_BUILD_ROOT
