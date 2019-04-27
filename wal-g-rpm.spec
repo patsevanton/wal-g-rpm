@@ -22,7 +22,7 @@ Citus Data blog post "Introducing WAL-G by Citus: Faster Disaster Recovery for P
 %setup -q -c -n wal-g.linux-amd64
 
 %install
-rm -rf $RPM_BUILD_ROOT
+#rm -rf $RPM_BUILD_ROOT
 %{__install} -m 0755 -d %{buildroot}%{_bindir}
 %{__install} -m 0755 -d %{buildroot}/etc/wal-g.d/
 cp wal-g %{buildroot}/%{_bindir}/%{name}
