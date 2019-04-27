@@ -14,7 +14,8 @@ BuildRequires:  tree
 WAL-G
 
 %prep
+ls -lh
 %setup -q -c
 
 %install
-ls
+tree
