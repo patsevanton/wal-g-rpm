@@ -1,3 +1,5 @@
+%global _prefix /usr/local
+
 Name:    wal-g
 Version: 0.2.7
 Release: 1
@@ -19,3 +21,10 @@ ls -lh
 
 %install
 tree
+%{__install} -m 0755 -d %{buildroot}%{_bindir}
+ls %{buildroot}
+cp wal-g %{buildroot}%{_bindir}/%{name}
+
+%files
+%{_bindir}/%{name}
+
