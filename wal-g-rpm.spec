@@ -21,9 +21,11 @@ Citus Data blog post "Introducing WAL-G by Citus: Faster Disaster Recovery for P
 
 %prep
 #%setup -c -n wal-g-%{version}-%{release}.x86_64
+tree
 %setup -q
 
 %install
+tree
 ls
 pwd
 #cd wal-g-%{version}-%{release}.x86_64
