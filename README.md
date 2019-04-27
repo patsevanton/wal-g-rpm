@@ -1,2 +1,3 @@
 # wal-g-rpm
-WAL-G rpm packages
+rpm packages for WAL-G
+WAL-G Archival and Restoration for Postgres
