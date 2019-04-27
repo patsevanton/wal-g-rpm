@@ -12,8 +12,5 @@ done
 
 rm -rf ~/rpmbuild/
 mkdir -p ~/rpmbuild/{RPMS,SRPMS,BUILD,SOURCES,SPECS}
-cd SOURCES
-cp server-s3.conf ~/rpmbuild/SOURCES
-cd ..
 spectool -g -R wal-g-rpm.spec
 rpmbuild -bb wal-g-rpm.spec
