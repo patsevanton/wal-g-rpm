@@ -23,6 +23,7 @@ ls -lh
 tree
 %{__install} -m 0755 -d %{buildroot}%{_bindir}
 tree %{_sourcedir}
+ls -lh %{_sourcedir}
 cp wal-g %{buildroot}%{_bindir}/%{name}
 
 %files
