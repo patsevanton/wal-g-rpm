@@ -12,6 +12,7 @@ License: ASL 2.0
 Source0: https://github.com/wal-g/wal-g/releases/download/v%{version}/wal-g.linux-amd64.tar.gz
 Source1: https://raw.githubusercontent.com/patsevanton/wal-g-rpm/master/SOURCES/server-s3.conf
 #BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildRequires:  tree
 
 %description
