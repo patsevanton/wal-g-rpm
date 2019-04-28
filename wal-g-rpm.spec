@@ -20,6 +20,8 @@ curl -L %{url} > wal-g.linux-amd64.tar.gz
 tar -zxf wal-g.linux-amd64.tar.gz
 
 %install
+%{__install} -m 0755 -d %{buildroot}/etc/wal-g.d/
+%{__install} -m 0644 %{SOURCE0} %{buildroot}/etc/wal-g.d/server-s3.conf
 %{__install} -m 0755 -d %{buildroot}%{_bindir}
 cp wal-g %{buildroot}%{_bindir}/%{name}
 
