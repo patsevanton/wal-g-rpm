@@ -17,7 +17,7 @@ Citus Data blog post "Introducing WAL-G by Citus: Faster Disaster Recovery for P
 
 %prep
 curl -o %{_sourcedir}/wal-g.linux-amd64.tar.gz %{url}
-%setup -q -c
+tar -zxf wal-g.linux-amd64.tar.gz
 
 %install
 tree
