@@ -16,12 +16,12 @@ and non-exclusive base backups for Postgres. More information on the design and 
 Citus Data blog post "Introducing WAL-G by Citus: Faster Disaster Recovery for Postgres".
 
 %prep
-%setup -c -n wal-g
+%setup -c
 
 %install
 %{__install} -m 0755 -d %{buildroot}%{_bindir}
-ls -lh %{_sourcedir}
-cp wal-g %{buildroot}%{_bindir}/%{name}
+ls -lh %{_sourcedir}/v%{version}
+cp v%{version}/wal-g %{buildroot}%{_bindir}/%{name}
 
 %files
 %{_bindir}/%{name}
