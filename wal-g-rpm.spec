@@ -6,7 +6,6 @@ Release: 1
 Summary: Archival and Restoration for Postgres
 
 Group:   Development Tools
-URL:     https://github.com/wal-g/wal-g
 License: ASL 2.0
 URL: https://github.com/wal-g/wal-g/releases/download/v%{version}/wal-g.linux-amd64.tar.gz
 
