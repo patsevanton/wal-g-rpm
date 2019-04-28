@@ -27,3 +27,4 @@ cp wal-g %{buildroot}%{_bindir}/%{name}
 
 %files
 %{_bindir}/%{name}
+/etc/wal-g.d/server-s3.conf
