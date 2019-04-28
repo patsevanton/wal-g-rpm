@@ -1,22 +1,22 @@
 %global _prefix /usr/local
 
 Name:    wal-g
-Version: 0.2.7
+Version: 0.2.9
 Release: 1
 Summary: Archival and Restoration for Postgres
 
 Group:   Development Tools
 URL:     https://github.com/wal-g/wal-g
 License: ASL 2.0
-Source0: https://github.com/wal-g/wal-g/releases/download/v0.2.7/wal-g.linux-amd64.tar.gz
-BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
-BuildRequires:  tree
+URL: https://github.com/wal-g/wal-g/releases/download/v%{version}/wal-g.linux-amd64.tar.gz
 
 %description
-WAL-G
+WAL-G is the successor of WAL-E with a number of key differences. WAL-G uses LZ4, LZMA or Brotli compression, multiple processors
+and non-exclusive base backups for Postgres. More information on the design and implementation of WAL-G can be found on the
+Citus Data blog post "Introducing WAL-G by Citus: Faster Disaster Recovery for Postgres".
 
 %prep
-ls -lh
+curl -o %{_sourcedir}/wal-g.linux-amd64.tar.gz %{url}
 %setup -q -c
 
 %install
@@ -28,4 +28,3 @@ cp wal-g %{buildroot}%{_bindir}/%{name}
 
 %files
 %{_bindir}/%{name}
-
