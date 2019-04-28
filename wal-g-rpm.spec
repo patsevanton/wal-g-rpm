@@ -29,7 +29,7 @@ tree %{_sourcedir}
 ls %{_sourcedir}
 ls %{_sourcedir}/v%{version}
 %{__install} -m 0755 -d %{buildroot}%{_bindir}
-cp v%{version}/wal-g %{buildroot}%{_bindir}/%{name}
+cp wal-g %{buildroot}%{_bindir}/%{name}
 
 %files
 %{_bindir}/%{name}
