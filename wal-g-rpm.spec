@@ -17,10 +17,11 @@ Citus Data blog post "Introducing WAL-G by Citus: Faster Disaster Recovery for P
 
 %prep
 %setup -c
+ls %{_sourcedir}
 
 %install
 %{__install} -m 0755 -d %{buildroot}%{_bindir}
-ls -lh %{_sourcedir}/v%{version}
+ls %{_sourcedir}/v%{version}
 cp v%{version}/wal-g %{buildroot}%{_bindir}/%{name}
 
 %files
