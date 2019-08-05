@@ -1,7 +1,7 @@
 %global _prefix /usr/local
 
 Name:    wal-g
-Version: 0.2.9
+Version: 0.2.10
 Release: 1
 Summary: Archival and Restoration for Postgres
 
