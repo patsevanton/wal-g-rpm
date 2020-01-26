@@ -4,3 +4,9 @@
 rpm packages for WAL-G
 
 WAL-G Archival and Restoration for Postgres
+
+yum -y install yum-plugin-copr
+
+yum copr enable antonpatsev/wal-g
+
+yum install -y wal-g
