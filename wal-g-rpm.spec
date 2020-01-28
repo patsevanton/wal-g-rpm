@@ -2,13 +2,17 @@
 
 Name:    wal-g
 Version: 0.2.14
-Release: 1
+Release: 2
 Summary: Archival and Restoration for Postgres
 
 Group:   Development Tools
 License: ASL 2.0
 URL: https://github.com/wal-g/wal-g/releases/download/v%{version}/wal-g.linux-amd64.tar.gz
 Source0: server-s3.conf
+Source1: backup_list.sh
+Source2: backup_push.sh
+Source3: backup_restore.sh
+Source4: wal-push.sh
 
 %description
 WAL-G is the successor of WAL-E with a number of key differences. WAL-G uses LZ4, LZMA or Brotli compression, multiple processors
@@ -24,7 +28,15 @@ tar -zxf wal-g.linux-amd64.tar.gz
 %{__install} -m 0644 %{SOURCE0} %{buildroot}/etc/wal-g.d/server-s3.conf
 %{__install} -m 0755 -d %{buildroot}%{_bindir}
 cp wal-g %{buildroot}%{_bindir}/%{name}
+cp %{SOURCE1} %{buildroot}%{_bindir}/backup_list.sh
+cp %{SOURCE2} %{buildroot}%{_bindir}/backup_push.sh
+cp %{SOURCE3} %{buildroot}%{_bindir}/backup_restore.sh
+cp %{SOURCE4} %{buildroot}%{_bindir}/wal-push.sh
 
 %files
 %{_bindir}/%{name}
+%{_bindir}/backup_list.sh
+%{_bindir}/backup_push.sh
+%{_bindir}/backup_restore.sh
+%{_bindir}/wal-push.sh
 /etc/wal-g.d/server-s3.conf
