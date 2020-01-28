@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+if [ $USER != "postgres" ]; then
+        echo "Script must be run as user: postgres"
+        exit -1
+fi
+
 source /etc/wal-g.d/server-s3.conf
 
 if [[ -z "$WALE_S3_PREFIX" ]]; then

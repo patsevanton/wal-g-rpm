@@ -33,4 +33,4 @@ if [[ -z "$PGDATA" ]]; then
   exit 1
 fi
 
-/usr/local/bin/wal-g backup-fetch $PGDATA LATEST
+/usr/local/bin/wal-g $1 $2 $3 $4 $5
