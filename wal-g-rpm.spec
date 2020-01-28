@@ -3,7 +3,7 @@
 
 Name:    wal-g
 Version: 0.2.14
-Release: 11
+Release: 12
 Summary: Archival and Restoration for Postgres
 
 Group:   Development Tools
@@ -13,8 +13,9 @@ Source0: server-s3.conf
 Source1: backup-fetch.sh
 Source2: backup-list.sh
 Source3: backup-push.sh
-Source4: wal-g-run.sh
-Source5: wal-push.sh
+Source4: wal-fetch.sh
+Source5: wal-g-run.sh
+Source6: wal-push.sh
 
 %description
 WAL-G is the successor of WAL-E with a number of key differences. WAL-G uses LZ4, LZMA or Brotli compression, multiple processors
@@ -33,14 +34,16 @@ cp wal-g %{buildroot}%{_bindir}/%{name}
 cp %{SOURCE1} %{buildroot}%{_bindir}/backup-fetch.sh
 cp %{SOURCE2} %{buildroot}%{_bindir}/backup-list.sh
 cp %{SOURCE3} %{buildroot}%{_bindir}/backup-push.sh
-cp %{SOURCE4} %{buildroot}%{_bindir}/wal-g-run.sh
-cp %{SOURCE5} %{buildroot}%{_bindir}/wal-push.sh
+cp %{SOURCE4} %{buildroot}%{_bindir}/wal-fetch.sh
+cp %{SOURCE5} %{buildroot}%{_bindir}/wal-g-run.sh
+cp %{SOURCE6} %{buildroot}%{_bindir}/wal-push.sh
 
 %files
 %{_bindir}/%{name}
 %{_bindir}/backup-fetch.sh
 %{_bindir}/backup-list.sh
 %{_bindir}/backup-push.sh
+%{_bindir}/wal-fetch.sh
 %{_bindir}/wal-g-run.sh
 %{_bindir}/wal-push.sh
 /etc/wal-g.d/server-s3.conf
