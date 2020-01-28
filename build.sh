@@ -10,7 +10,7 @@ do
     fi
 done
 
-rm -rf ~/rpmbuild/
-mkdir -p ~/rpmbuild/{RPMS,SRPMS,BUILD,SOURCES,SPECS}
-spectool -g -R wal-g-rpm.spec
-rpmbuild -bb wal-g-rpm.spec
+mkdir -p ./{RPMS,SRPMS,BUILD,SOURCES,SPECS}
+cp server-s3.conf SOURCES
+spectool -g -C SOURCES wal-g-rpm.spec
+rpmbuild --quiet --define "_topdir `pwd`" -bb wal-g-rpm.spec
