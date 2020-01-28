@@ -11,6 +11,6 @@ do
 done
 
 mkdir -p ./{RPMS,SRPMS,BUILD,SOURCES,SPECS}
-cp server-s3.conf SOURCES
+cp server-s3.conf backup-fetch.sh backup-list.sh backup-push.sh wal-push.sh SOURCES
 spectool -g -C SOURCES wal-g-rpm.spec
 rpmbuild --quiet --define "_topdir `pwd`" -bb wal-g-rpm.spec
