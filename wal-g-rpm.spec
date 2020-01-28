@@ -3,7 +3,7 @@
 
 Name:    wal-g
 Version: 0.2.14
-Release: 7
+Release: 8
 Summary: Archival and Restoration for Postgres
 
 Group:   Development Tools
