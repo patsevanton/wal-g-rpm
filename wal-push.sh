@@ -28,4 +28,4 @@ if [[ -z "$PGDATA" ]]; then
   exit 1
 fi
 
-/usr/local/bin/wal-g wal-push $PGDATA $1
+/usr/local/bin/wal-g wal-push $PGDATA/$1
