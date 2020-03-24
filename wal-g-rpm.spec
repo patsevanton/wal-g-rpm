@@ -2,8 +2,8 @@
 %global __strip /bin/true
 
 Name:    wal-g
-Version: 0.2.14
-Release: 13
+Version: 0.2.15
+Release: 1
 Summary: Archival and Restoration for Postgres
 
 Group:   Development Tools
