@@ -9,6 +9,7 @@ Summary: Archival and Restoration for Postgres
 Group:   Development Tools
 License: ASL 2.0
 URL: https://github.com/wal-g/wal-g/releases/download/v%{version}/wal-g.linux-amd64.tar.gz
+Source0: build.sh
 
 %description
 WAL-G is the successor of WAL-E with a number of key differences. WAL-G uses LZ4, LZMA or Brotli compression, multiple processors
