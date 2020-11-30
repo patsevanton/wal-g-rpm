@@ -2,7 +2,7 @@
 %global __strip /bin/true
 
 Name:    wal-g
-Version: 0.2.18
+Version: 0.2.19
 Release: 1
 Summary: Archival and Restoration for Postgres
 
