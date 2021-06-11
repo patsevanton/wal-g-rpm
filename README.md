@@ -9,4 +9,4 @@ yum -y install yum-plugin-copr
 
 yum copr enable antonpatsev/wal-g
 
-yum install -y wal-g
+yum install -y wal-g-pg
